@@ -27,22 +27,22 @@ The goal of this project is to transform Ansible projects with mixte YAML & Ansi
 
 * Work only with this modules list
 ```
-⋅⋅⋅ apt
-⋅⋅⋅ service
-⋅⋅⋅ wait_for
-⋅⋅⋅ file
-⋅⋅⋅ line
-⋅⋅⋅ lineinfile
-⋅⋅⋅ package
-⋅⋅⋅ stat
-⋅⋅⋅ sysctl
-⋅⋅⋅ uri
-⋅⋅⋅ user
-⋅⋅⋅ systemd
-⋅⋅⋅ copy
-⋅⋅⋅ replace
-⋅⋅⋅ alternatives
-⋅⋅⋅ stat
-⋅⋅⋅ file
-⋅⋅⋅ template
+ apt
+ service
+ wait_for
+ file
+ line
+ lineinfile
+ package
+ stat
+ sysctl
+ uri
+ user
+ systemd
+ copy
+ replace
+ alternatives
+ stat
+ file
+ template
 ```
