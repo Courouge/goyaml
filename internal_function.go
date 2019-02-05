@@ -54,7 +54,7 @@ func delete_double_quote(t string) string {
 func clean_whitespace(t string) string {
 	var t1 string
 	for i, r := range t {
-		if i != 0  && i != len(t) - 1 {
+		if i != 0  && i != len(t) {
 			if t[i] == ' ' && t[i-1] == '{' {
 				t1 = t1 + ""
 			} else if t[i] == ' ' && t[i+1] == '}'{

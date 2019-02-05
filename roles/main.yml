@@ -1,0 +1,7 @@
+- name: insert iptables rule
+  lineinfile: dest=/etc/sysconfig/iptables state=present regexp="{{ mysql_port }}" insertafter=":OUTP " trololo="-A INPUT -p tcp--dport{{ mysql_port }}-jACCEPT"
+  notify: restart iptables
+
+- name: insert iptables rule
+  lineinfile: dest=/etc/sysconfig/iptables state=present regexp="{{ mysql_port }}" insertafter=":OUTP " trololo="-A INPUT -p tcp--dport{{ mysql_port }}-jACCEPT"
+  notify: restart iptables
