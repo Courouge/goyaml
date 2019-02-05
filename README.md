@@ -26,6 +26,7 @@ The goal of this project is to transform Ansible projects with mixte YAML & Ansi
 ```
 
 * Work only with this modules list
+```
 ⋅⋅⋅ apt
 ⋅⋅⋅ service
 ⋅⋅⋅ wait_for
@@ -44,3 +45,4 @@ The goal of this project is to transform Ansible projects with mixte YAML & Ansi
 ⋅⋅⋅ stat
 ⋅⋅⋅ file
 ⋅⋅⋅ template
+```
