@@ -3,7 +3,7 @@ The goal of this project is to transform your ansible project with mixte YAML & 
 * Mixte Ansible/YAML syntax
 ```Ansible
   - name: insert iptables rule
-    lineinfile: dest=/etc/sysconfig/iptables state=present regexp="{{ mysql_port }}" insertafter="trololo " line="trololo"
+    lineinfile: dest=/etc/sysconfig/iptables state=present regexp="{{ mysql_port }}" insertafter="trololo" line="trololo"
     notify: restart iptables
 ```
 * Pure YAML syntax
@@ -22,5 +22,5 @@ The goal of this project is to transform your ansible project with mixte YAML & 
 
 ```
 - name: space in args
-  lineinfile: dest=/etc/sysconfig/iptables state=present regexp="{{ mysql_port }}" insertafter="trololo " line="tro lo lo"
+  lineinfile: dest=/etc/sysconfig/iptables state=present regexp="{{ mysql _port }}" insertafter="tro lolo " line="tro lo lo"
 ```
