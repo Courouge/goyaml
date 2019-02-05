@@ -25,7 +25,7 @@ The goal of this project is to transform Ansible projects with mixte YAML & Ansi
   lineinfile: dest=/etc/sysconfig/iptables state=present regexp="{{ mysql _port }}" insertafter="tro lolo " line="tro lo lo"
 ```
 
-* Work only with this modules list
+* Work only with this ansible module list
 ```
  apt
  service
