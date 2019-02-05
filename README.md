@@ -1,4 +1,4 @@
-The goal of this project is to transform your ansible project with mixte YAML & Ansible syntax to pure YAML.
+The goal of this project is to transform Ansible projects with mixte YAML & Ansible syntax to pure YAML.
 
 * Mixte Ansible/YAML syntax
 ```Ansible
