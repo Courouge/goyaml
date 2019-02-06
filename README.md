@@ -1,10 +1,5 @@
 The goal of this project is to transform Ansible projects with mixte YAML & Ansible syntax to pure YAML.
 
-* How it's works ?
-```
-go run *.go
-
-```
 * Mixte Ansible/YAML syntax
 ```Ansible
   - name: insert iptables rule
@@ -21,6 +16,12 @@ go run *.go
       insertafter: "trololo"
       line: "trololo"
     notify: restart iptables
+```
+
+* How it's works ?
+```
+go run *.go
+
 ```
 
 * Bugs
