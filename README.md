@@ -26,28 +26,8 @@ go run *.go
 * Bugs
 
 ```
-- name: space in args
+- name: space in args module
   lineinfile: dest=/etc/sysconfig/iptables state=present regexp="{{ mysql _port }}" insertafter="tro lolo " line="tro lo lo"
 ```
 
-* Work only with this ansible module list
-```
- apt
- service
- wait_for
- file
- line
- lineinfile
- package
- stat
- sysctl
- uri
- user
- systemd
- copy
- replace
- alternatives
- stat
- file
- template
-```
+* Work with modules list in modules.txt
