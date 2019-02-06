@@ -5,7 +5,6 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
-	//"net/http"
 )
 
 func WriteStringToFile(filepath, s string) error {
@@ -84,31 +83,6 @@ func Yamlfiles(dir string) []string {
 	return files
 }
 
-func testmodule(s string) bool {
-if  (strings.HasPrefix(s, "  apt: ") == true) ||
-  (strings.HasPrefix(s, "  service: ") == true) ||
-  (strings.HasPrefix(s, "  wait_for: ") == true) ||
-  (strings.HasPrefix(s, "  file: ") == true) ||
-  (strings.HasPrefix(s, "  line: ") == true) ||
-  (strings.HasPrefix(s, "  lineinfile: ") == true) ||
-  (strings.HasPrefix(s, "  package: ") == true) ||
-  (strings.HasPrefix(s, "  stat: ") == true) ||
-  (strings.HasPrefix(s, "  sysctl: ") == true) ||
-  (strings.HasPrefix(s, "  uri: ") == true) ||
-  (strings.HasPrefix(s, "  user: ") == true) ||
-  (strings.HasPrefix(s, "  systemd: ") == true) ||
-  (strings.HasPrefix(s, "  copy: ") == true) ||
-  (strings.HasPrefix(s, "  replace: ") == true) ||
-  (strings.HasPrefix(s, "  alternatives: ") == true) ||
-  (strings.HasPrefix(s, "  stat: ") == true) ||
-  (strings.HasPrefix(s, "  file: ") == true) ||
-  (strings.HasPrefix(s, "  template: ") == true) {
-    return true
-  } else {
-    return false
-  }
-}
-
 func add_whitespace(t string) string {
 	var t1 string
 	for i, r := range t {
@@ -123,4 +97,35 @@ func add_whitespace(t string) string {
 		}
 	}
 	return t1
+}
+
+func moduleSearch(s []string) []string {
+    var search []string
+    for i := range s {
+        var tmp =  "  " + s[i] + ": "
+        search = append(search, tmp)
+        // fmt.Println(search[i])
+    }
+
+    return search
+}
+
+func testmodule2(s string, modules []string) bool {
+var (
+ToBe bool = false
+)
+//   file:
+    for i := range modules {
+        if (strings.HasPrefix(s, string(modules[i])) == true) {
+            ToBe = true
+            // println(string(modules[i]))
+        }
+    }
+    return ToBe
+}
+
+func check(e error) {
+    if e != nil {
+        panic(e)
+    }
 }

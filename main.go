@@ -6,13 +6,19 @@ import (
 	"strings"
 	"log"
 	//"fmt"
-	//"io/ioutil"
+	"io/ioutil"
 	//"regexp"
 )
 
 func main() {
 
   var ymlfiles, finalfile []string
+
+    // next step crawl this ==> https://docs.ansible.com/ansible/latest/modules/list_of_all_modules.html
+    modules, err := ioutil.ReadFile("modules.txt")
+    check(err)
+    listmodules := strings.Split(string(modules), "\n")
+    values := moduleSearch(listmodules)
 
   dir, err := os.Getwd()
 	if err != nil {
@@ -44,7 +50,7 @@ func main() {
 
       words :=  strings.Fields( clean_whitespace(fileScanner.Text()))
 
-      if testmodule(fileScanner.Text()) == true {
+      if testmodule2(string(fileScanner.Text()),values) == true {
           for i, v := range words {
             if i == 0 && words[0] != fileScanner.Text() {
                 v =   "  "  + v + string('\n')
@@ -60,8 +66,7 @@ func main() {
                 v = strings.Replace(v, "}}", " }}", -1)
                 v =  "  " + "  " + v + string('\n')
                 if len(words) == i {
-                    v = v + "sdsds"
-
+                    v = v + ""
                 }
                 finalfile = append(finalfile, v)
               }
