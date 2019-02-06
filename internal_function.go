@@ -5,6 +5,7 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+	//"net/http"
 )
 
 func WriteStringToFile(filepath, s string) error {

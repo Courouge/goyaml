@@ -3,13 +3,14 @@ package main
 import (
 	"bufio"
 	"os"
-	// "fmt"
 	"strings"
 	"log"
+	//"fmt"
+	//"io/ioutil"
+	//"regexp"
 )
 
 func main() {
-
 
   var ymlfiles, finalfile []string
 
@@ -17,7 +18,20 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-  // fmt.Println(dir)
+/*
+    data, err := ioutil.ReadFile(dir + "/modules.txt")
+    r := regexp.MustCompile( ".*_module.html")
+    fmt.Println(r)
+    match := r.FindAllString(string(data), -1)
+    fmt.Println(match[0])
+    var filter []string
+    for i := range match {
+
+        fmt.Println(string(match[i]))
+        strings.Replace(match, "=", "", -1)
+
+    }
+*/
 
   // configure your ansible roles path
   ymlfiles = Yamlfiles(dir + "/roles")
