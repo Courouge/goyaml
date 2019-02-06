@@ -1,2 +1,3 @@
-- name: insert iptables rule
-  lineinfile: dest=/etc/sysconfig/iptables state=present regexp="{{ mysql_port }}" insertafter="trololo" line="trololo"
+- name: insert trololo
+  lineinfile: dest=/etc/trololo state=present regexp="{{ trololo }}" insertafter="trololo" line="trololo"
+  notify: restart trololo
